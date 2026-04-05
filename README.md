@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🎬 Flix API - Sistema de Gerenciamento de Filmes
 
 ## 📄 Descrição
