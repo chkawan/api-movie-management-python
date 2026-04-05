@@ -1,0 +1,500 @@
+{
+  "info": {
+    "name": "Flix API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Coleção de endpoints para os apps genres, actors, movies e reviews do projeto Flix API. Use {{base_url}} para ajustar a URL do servidor."
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:8000",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Genres",
+      "item": [
+        {
+          "name": "Listar gêneros",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/genres/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "genres",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Criar gênero",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Ação\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/genres/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "genres",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Obter gênero por id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/genres/{{genreId}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "genres",
+                "{{genreId}}",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Atualizar gênero",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Ação e Aventura\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/genres/{{genreId}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "genres",
+                "{{genreId}}",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Deletar gênero",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/genres/{{genreId}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "genres",
+                "{{genreId}}",
+                ""
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Actors",
+      "item": [
+        {
+          "name": "Listar atores",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/actors/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "actors",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Criar ator",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Maria Souza\",\n  \"birthday\": \"1990-01-01\",\n  \"nationality\": \"BR\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/actors/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "actors",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Obter ator por id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/actors/{{actorId}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "actors",
+                "{{actorId}}",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Atualizar ator",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Maria Silva\",\n  \"birthday\": \"1990-01-01\",\n  \"nationality\": \"BR\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/actors/{{actorId}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "actors",
+                "{{actorId}}",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Deletar ator",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/actors/{{actorId}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "actors",
+                "{{actorId}}",
+                ""
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Movies",
+      "item": [
+        {
+          "name": "Listar filmes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/movies/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "movies",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Criar filme",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Filme Exemplo\",\n  \"genre\": 1,\n  \"release_date\": \"2024-04-04\",\n  \"actors\": [1],\n  \"resume\": \"Resumo do filme.\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/movies/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "movies",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Obter filme por id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/movies/{{movieId}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "movies",
+                "{{movieId}}",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Atualizar filme",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Filme Atualizado\",\n  \"genre\": 1,\n  \"release_date\": \"2024-05-01\",\n  \"actors\": [1],\n  \"resume\": \"Resumo atualizado.\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/movies/{{movieId}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "movies",
+                "{{movieId}}",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Deletar filme",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/movies/{{movieId}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "movies",
+                "{{movieId}}",
+                ""
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reviews",
+      "item": [
+        {
+          "name": "Listar reviews",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/reviews/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "reviews",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Criar review",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"movie\": 1,\n  \"stars\": 5,\n  \"comment\": \"Ótimo filme.\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/reviews/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "reviews",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Obter review por id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/reviews/{{reviewId}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "reviews",
+                "{{reviewId}}",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Atualizar review",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"movie\": 1,\n  \"stars\": 4,\n  \"comment\": \"Muito bom, mas poderia melhorar.\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/reviews/{{reviewId}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "reviews",
+                "{{reviewId}}",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Deletar review",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/reviews/{{reviewId}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "reviews",
+                "{{reviewId}}",
+                ""
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
